@@ -9,9 +9,10 @@ body, html {
 	background: url("assets/bg.jpg") no-repeat center center fixed;
 	background-size: cover;
 }
+
 .item {
     width: 120px;
-    min-height: 25%;
+    min-height: 200px;
     max-height: auto;
     float: left;
     margin: 3px;
@@ -22,20 +23,51 @@ body, html {
 -webkit-transform:scale(1.5); /* or some other value */
     transform:scale(1.5);
 	}
+
+.itemlong {
+    width: 200px;
+    min-height: 120px;
+    max-height: auto;
+    float: left;
+    margin: 3px;
+    padding: 3px;
+	transition:transform 0.25s ease;
+}
+.itemlong:hover {
+-webkit-transform:scale(1.5); /* or some other value */
+    transform:scale(1.5);
+	}
+	
+.itemsquareish {
+    width: 300px;
+    min-height: 120px;
+    max-height: auto;
+    float: left;
+    margin: 3px;
+    padding: 3px;
+	transition:transform 0.25s ease;
+}
+.itemsquareish:hover {
+-webkit-transform:scale(1.5); /* or some other value */
+    transform:scale(1.5);
+	}
+	
 .shroom {
 	height: 180px;
 }
 .aboutme{
-display: inline-block; 
-text-align:center;
+	display: inline-block; 
+	text-align:center;
+	background-color: #CCFFFF;
 }
 .imageholder {
-	height: 250px;
+	height: auto;
 	width: auto;
     margin: 20px;
-	background-color: #ffffff;
+	background-color: #9999CC;
 	display:flex; 
 	align-items:center;
+	padding: 10px;
 	}
 .imageholderholder {
 	display: inline-block;
@@ -56,63 +88,33 @@ text-align:center;
 
 <div class="imageholderholder">
 <div class="imageholder">
-<img class="item" src="assets/1.png">
-<img class="item" src="assets/2.png">
-<img class="item" src="assets/3.png">
-<img class="item" src="assets/4.png">
-<img class="item" src="assets/5.png">
-<img class="item" src="assets/6.png">
+<img class="itemlong" src="assets/4.png">
+<img class="itemlong" src="assets/2.png">
+<img class="itemlong" src="assets/1.png">
+<img class="itemlong" src="assets/6.png">
+<img class="itemlong" src="assets/7.png">
 </div>
 </div>
 
 <br>
 <div class="imageholderholder">
 <div class="imageholder">
-<img class="item" src="assets/1.png">
-<img class="item" src="assets/2.png">
-<img class="item" src="assets/3.png">
-<img class="item" src="assets/4.png">
-<img class="item" src="assets/5.png">
-<img class="item" src="assets/6.png">
+<img class="itemsquareish" src="assets/3.png">
+<img class="itemsquareish" src="assets/5.png">
+<img class="itemsquareish" src="assets/8.png">
+<img class="itemsquareish" src="assets/10.png">
+<img class="itemsquareish" src="assets/13.jpg">
 </div>
 </div>
 
-<br>
 <div class="imageholderholder">
 <div class="imageholder">
-<img class="item" src="assets/1.png">
-<img class="item" src="assets/2.png">
-<img class="item" src="assets/3.png">
-<img class="item" src="assets/4.png">
-<img class="item" src="assets/5.png">
-<img class="item" src="assets/6.png">
+<img class="itemsquareish" src="assets/9.png">
+<img class="itemsquareish" src="assets/11.png">
+<img class="itemsquareish" src="assets/12.png">
+<img class="itemlong" src="assets/14.jpg">
 </div>
 </div>
-
-<br>
-<div class="imageholderholder">
-<div class="imageholder">
-<img class="item" src="assets/1.png">
-<img class="item" src="assets/2.png">
-<img class="item" src="assets/3.png">
-<img class="item" src="assets/4.png">
-<img class="item" src="assets/5.png">
-<img class="item" src="assets/6.png">
-</div>
-</div>
-
-<br>
-<div class="imageholderholder">
-<div class="imageholder">
-<img class="item" src="assets/1.png">
-<img class="item" src="assets/2.png">
-<img class="item" src="assets/3.png">
-<img class="item" src="assets/4.png">
-<img class="item" src="assets/5.png">
-<img class="item" src="assets/6.png">
-</div>
-</div>
-
 
 </body>
 </html>
