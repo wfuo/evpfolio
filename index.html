@@ -11,18 +11,35 @@ body, html {
 }
 .item {
     width: 120px;
-    min-height: 120px;
+    min-height: 25%;
     max-height: auto;
     float: left;
     margin: 3px;
     padding: 3px;
-	display: block;
+	transition:transform 0.25s ease;
+}
+.item:hover {
+-webkit-transform:scale(1.5); /* or some other value */
+    transform:scale(1.5);
+	}
+.shroom {
+	height: 180px;
+}
+.aboutme{
+display: inline-block; 
+text-align:center;
 }
 .imageholder {
 	height: 250px;
 	width: auto;
     margin: 20px;
 	background-color: #ffffff;
+	display:flex; 
+	align-items:center;
+	}
+.imageholderholder {
+	display: inline-block;
+	margin-top: 10px;
 }
 </style>
 
@@ -31,9 +48,13 @@ body, html {
 <body>
 <h1>evie's portfolio</h1>
 <br>
-<img class="item" src="assets/shroom.png">
-<a href="google.com">about me</a>
+<div class="aboutme">
+<img class="shroom" src="assets/shroom.png">
 <br>
+<a href="google.com">about me</a>
+</div>
+
+<div class="imageholderholder">
 <div class="imageholder">
 <img class="item" src="assets/1.png">
 <img class="item" src="assets/2.png">
@@ -42,6 +63,56 @@ body, html {
 <img class="item" src="assets/5.png">
 <img class="item" src="assets/6.png">
 </div>
+</div>
+
+<br>
+<div class="imageholderholder">
+<div class="imageholder">
+<img class="item" src="assets/1.png">
+<img class="item" src="assets/2.png">
+<img class="item" src="assets/3.png">
+<img class="item" src="assets/4.png">
+<img class="item" src="assets/5.png">
+<img class="item" src="assets/6.png">
+</div>
+</div>
+
+<br>
+<div class="imageholderholder">
+<div class="imageholder">
+<img class="item" src="assets/1.png">
+<img class="item" src="assets/2.png">
+<img class="item" src="assets/3.png">
+<img class="item" src="assets/4.png">
+<img class="item" src="assets/5.png">
+<img class="item" src="assets/6.png">
+</div>
+</div>
+
+<br>
+<div class="imageholderholder">
+<div class="imageholder">
+<img class="item" src="assets/1.png">
+<img class="item" src="assets/2.png">
+<img class="item" src="assets/3.png">
+<img class="item" src="assets/4.png">
+<img class="item" src="assets/5.png">
+<img class="item" src="assets/6.png">
+</div>
+</div>
+
+<br>
+<div class="imageholderholder">
+<div class="imageholder">
+<img class="item" src="assets/1.png">
+<img class="item" src="assets/2.png">
+<img class="item" src="assets/3.png">
+<img class="item" src="assets/4.png">
+<img class="item" src="assets/5.png">
+<img class="item" src="assets/6.png">
+</div>
+</div>
+
 
 </body>
 </html>
