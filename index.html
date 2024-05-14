@@ -10,13 +10,43 @@ body, html {
 	background-size: cover;
 }
 
+.collapsible {
+  cursor: pointer;
+  text-align: left;
+  font-size: 30px;
+  margin-left: 5%;
+  border: none;
+  background: none;
+}
+.content {
+ height: 5%;
+  padding: 0 4px;
+  display: none;
+  overflow: hidden;
+  font-size: 25px;
+  margin-left: 6%;
+  margin-top: -1%;
+  margin-bottom: -1%;
+}
+.active, .collapsible:hover {
+  color: #638889;
+}
+.collapsible:after {
+  content: '\02303';
+  font-size: 12px;
+  color: black;
+  margin-left: 5px;
+}
+.active:after {
+  content: "\2304";
+}
 .item {
     width: 120px;
     min-height: 200px;
     max-height: auto;
     float: left;
     margin: 3px;
-    padding: 3px;
+    padding: 15px;
 	transition:transform 0.25s ease;
 }
 .item:hover {
@@ -29,8 +59,8 @@ body, html {
     min-height: 120px;
     max-height: auto;
     float: left;
-    margin: 3px;
-    padding: 3px;
+    margin: 15px;
+    padding: 15px;
 	transition:transform 0.25s ease;
 }
 .itemlong:hover {
@@ -43,8 +73,8 @@ body, html {
     min-height: 120px;
     max-height: auto;
     float: left;
-    margin: 3px;
-    padding: 3px;
+    margin: 15px;
+    padding: 15px;
 	transition:transform 0.25s ease;
 }
 .itemsquareish:hover {
@@ -85,7 +115,15 @@ body, html {
 <div class="aboutme">
 <img class="shroom" src="assets/shroom.png">
 <br>
-<a href="google.com">about me</a>
+<button type="button" class="collapsible">about me</button>
+<div class="content">
+  <p>Hi my name is evie smith, a freelance artist 
+<br>from bristol dreaming to get into tattooing. 
+<br>i find enjoyment in creating character 
+<br>designs, pet portraits and anything inbetween, 
+<br>so feel free to contact me at <i>evie.smith20@yahoo.com</i>
+<br>and @<i>evthesinner</i></p>
+</div> 
 </div>
 
 <div class="imageholderholder">
@@ -118,5 +156,21 @@ body, html {
 </div>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+} 
+</script>
 </body>
 </html>
